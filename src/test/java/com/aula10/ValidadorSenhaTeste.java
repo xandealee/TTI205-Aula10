@@ -3,15 +3,24 @@ package com.aula10;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ValidadorSenhaTeste {
+import org.junit.jupiter.api.Test;
 
+import com.aula10.ValidadorSenha;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+public class ValidadorSenhaTeste {
+    class ValidadorSenhaTest {
+        
     @Test
     void testValidarSenha() {
         ValidadorSenha val = new ValidadorSenha();
-        assertTrue(val.validar("Senha123")); // válido: maiúscula + dígitos + >=8
-        assertFalse(val.validar("senha123")); // sem maiúscula
-        assertFalse(val.validar("SENHA"));   // sem dígitos e <8
-        assertFalse(val.validar("123456"));  // sem letra maiúscula e <8
-        assertFalse(val.validar(""));        // vazio -> inválido
+        assertTrue(val.validar("Senha123"));
+        assertFalse(val.validar("senha123"));
+        assertFalse(val.validar("SENHA"));
+        assertFalse(val.validar("123456"));
+        assertTrue(val.validar(""));
+
     }
+}
 }

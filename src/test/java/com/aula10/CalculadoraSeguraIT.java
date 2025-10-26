@@ -1,3 +1,4 @@
+package com.aula10;
 
 import org.junit.jupiter.api.Test;
 
